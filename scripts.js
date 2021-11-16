@@ -1,7 +1,7 @@
 
 
 
-let roundCount = 0;
+let roundCount = 1;
 let yourScore = 0;
 let computerScore = 0;
 
@@ -55,7 +55,8 @@ function game() {
     const playerSelection = prompt("Enter your choice");
     const computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
-    return console.log(`Your score ${yourScore} and the computer's score ${computerScore} \t\t ${roundCount}`);
+    return console.log(`Round: ${roundCount}\nComputer's choice: ${computerSelection}. \nYour score ${yourScore} and the computer's score ${computerScore}`);
+
 }
 
     while (roundCount < 6) {
