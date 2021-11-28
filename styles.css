@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #a6d8d4;
+}
+
+header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.rock-paper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid red;   
+}
+
+.rock,
+.paper {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+header .title {
+
+        font-weight: 900;
+        font-size: 3.5em;
+}

@@ -1,11 +1,9 @@
 
-
-
 let roundCount = 1;
 let yourScore = 0;
 let computerScore = 0;
 
-
+// generate three different choices 
 function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3);
 
@@ -24,6 +22,7 @@ function computerPlay() {
     return randomNumber;
 }
 
+// one round of the game
 function playRound(playerSelection, computerSelection) {
 
     playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
@@ -51,6 +50,7 @@ function playRound(playerSelection, computerSelection) {
     } 
 }
 
+// plays the game 
 function game() {
     const playerSelection = prompt("Enter your choice");
     const computerSelection = computerPlay();
@@ -58,7 +58,7 @@ function game() {
     return console.log(`Round: ${roundCount}\nComputer's choice: ${computerSelection}. \nYour score ${yourScore} and the computer's score ${computerScore}`);
 
 }
-
+ 
     while (roundCount < 6) {
         game();
         roundCount++;
