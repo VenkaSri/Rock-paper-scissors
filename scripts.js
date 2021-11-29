@@ -2,6 +2,7 @@
 let roundCount = 1;
 let yourScore = 0;
 let computerScore = 0;
+let compHover = 0;
 
 // generate three different choices 
 function computerPlay() {
@@ -22,46 +23,27 @@ function computerPlay() {
     return randomNumber;
 }
 
-// one round of the game
-function playRound(playerSelection, computerSelection) {
+document.querySelector(".rock").addEventListener("click", function() {
+    return "Rock";
+  });
 
-    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
-    
-    if (playerSelection == "Rock" && computerSelection == "Paper") {
-        computerScore++;
-        return console.log("You lose! Paper beats rock");    
-    } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-        computerScore++;
-        return console.log("You lose! Scissors beats paper");    
-    } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-        computerScore++;
-        return console.log("You lose! Rock beats scissors");    
-    } else if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        yourScore++;
-        return console.log("You win! Rock beats scissors");    
-    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        yourScore++;
-        return console.log("You win! Paper beats Rock");    
-    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        yourScore++;
-        return console.log("You win! Scissors beats paper");    
-    }else { 
-        return console.log("It's a tie");
-    } 
-}
+// one round of the game
+
 
 // plays the game 
 function game() {
+    const disRoundCount = document.querySelector('.card-round-count');
     const playerSelection = prompt("Enter your choice");
     const computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
-    return console.log(`Round: ${roundCount}\nComputer's choice: ${computerSelection}. \nYour score ${yourScore} and the computer's score ${computerScore}`);
-
+    
+    return document.querySelector(".card-round-count").innerHTML = roundCount;
+      
+    
+    
 }
  
-    while (roundCount < 6) {
-        game();
-        roundCount++;
-    }
+
+
 
 
