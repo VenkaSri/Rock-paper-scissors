@@ -25,8 +25,6 @@ const scissorsButton = document.querySelector(".scissors");
             scissorsButton.classList.add("addclass");
             break;
     }
-
-
     return randomNumber;
 }
 
@@ -57,35 +55,39 @@ const scissorsButton = document.querySelector(".scissors");
     } 
 }
 
-
-rockButton.addEventListener("click", function() {
+function removeClass() {
     rockButton.classList.remove("addclass");
     scissorsButton.classList.remove("addclass");
     paperButton.classList.remove("addclass");
+}
+
+
+rockButton.addEventListener("click", function() {
     const playerSelection = "Rock";
     const displayRound = document.querySelector('.card-round-count');
+
     displayRound.textContent = roundCount++;
+    removeClass();
     playRound(playerSelection, computerPlay());
+    
     
 });
 
 paperButton.addEventListener("click", function() {
-    rockButton.classList.remove("addclass");
-    scissorsButton.classList.remove("addclass");
-    paperButton.classList.remove("addclass");
     const playerSelection = "Paper";
-    const displayRound = document.querySelector('card-round-count');
+    const displayRound = document.querySelector('.card-round-count');
+
     displayRound.textContent = roundCount++;
+    removeClass();
     playRound(playerSelection, computerPlay());
 });
 
 scissorsButton.addEventListener("click", function() {
-    rockButton.classList.remove("addclass");
-    scissorsButton.classList.remove("addclass");
-    paperButton.classList.remove("addclass");
     const playerSelection = "Scissors";
-    const displayRound = document.querySelector('card-round-count');
+    const displayRound = document.querySelector('.card-round-count');
+
     displayRound.textContent = roundCount++;
+    removeClass();
     playRound(playerSelection, computerPlay());
 });
 

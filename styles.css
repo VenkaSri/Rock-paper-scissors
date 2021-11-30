@@ -27,7 +27,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 50px;
+    gap: px;
     border: 1px solid red;   
 }
 
@@ -39,7 +39,7 @@ main {
     gap: 40px;
     height: 220px;
     width: 190px;
-    background-color: #F2F1F6;
+
     border-radius: 20px;
     margin-top: 20px;
 }
@@ -64,9 +64,19 @@ main {
 .inner-rock {
     height: 160px;
     width: 160px;
-    background-color: red;
+    background-color: #fff;
     border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+
+}
+
+.inner-rock img {
+    width: 200px;
+    length: 80px;
 }
 
 .inner-rock:hover{
