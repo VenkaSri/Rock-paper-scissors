@@ -6,6 +6,8 @@ compHover = 0;
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
+const startButton = document.querySelector('.start button');
+
 
 
   function computerPlay() {
@@ -91,7 +93,11 @@ scissorsButton.addEventListener("click", function() {
     playRound(playerSelection, computerPlay());
 });
 
-
+startButton.addEventListener('click', function() {
+    document.querySelector('.card-title').classList.remove('hide');
+    document.querySelector('.card-round-count').classList.remove('hide');
+    startButton.style.display = 'none';
+});
 
 
 
