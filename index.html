@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <script src="scripts.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <!--<script src="anime.js" defer></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <script src="script.js" defer></script>
+        <!--<script src="script.js" defer></script>-->
+        
+    </head>
+    <body>
+        <header>
+            <h1 class="title">ROCK PAPER SCISSORS</h1>            
+        </header>
+        <main>
+            <div class="rock-paper-container">
+                <div class="rock hide">
+                    <div class="inner-rock"><img src="images/rock.png"></div>
+                </div>
+                <div class="card">
+                    <div class="start"><button>START GAME</div>
+                    <div class="card-title hide">ROUND</div>
+                    <div class="card-round-count hide">1</div>
+                </div>
+                <div class="scissors hide">
+                    <div class="inner-rock"></div>
+                </div>
+            </div> 
+            <div class="paper hide">
+                <div class="inner-rock"></div>
+            </div>
+        </main>
     
-</body>
+    </body>
 </html>
