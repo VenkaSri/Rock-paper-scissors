@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #a6d8d4;
+    background-color: #201E20;
 }
 
 header {
@@ -15,11 +15,11 @@ header {
     justify-content: center;
 }
 
-
 .rock-paper-container {
       display: flex;
       gap: 90px;
 }
+
 main {
     margin-top: 60px;
     height: 500px;
@@ -27,8 +27,6 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: px;
-    border: 1px solid red;   
 }
 
 .card {
@@ -48,13 +46,12 @@ main {
     border-bottom: 1.5px solid red;
 }
 
-
 .rock,
 .paper,
 .scissors {
     height: 170px;
     width: 170px;
-    background-color: yellow;
+    background-color: #E0A96D;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -64,7 +61,7 @@ main {
 .inner-rock {
     height: 160px;
     width: 160px;
-    background-color: #fff;
+    background-color: #201E20;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -76,11 +73,10 @@ main {
 
 .inner-rock img {
     width: 200px;
-    length: 80px;
 }
 
 .inner-rock:hover{
-    border: 1px solid black;
+    border: 1px solid #E0A96D;
 }
 
 .addclass {
@@ -88,11 +84,24 @@ main {
 }
 
 header .title {
-
     font-weight: 900;
     font-size: 3.5em;
+    color: #eee;
+    background-color: #E0A96D;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 50px;
 }
 
 .hide {
     display: none;
+}
+.card button {
+    color: #eee;
+    background-color: #E0A96D;
+    outline: none;
+    border: 1px solid #E0A96D;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
 }

@@ -94,10 +94,15 @@ scissorsButton.addEventListener("click", function() {
 });
 
 startButton.addEventListener('click', function() {
-    document.querySelector('.card-title').classList.remove('hide');
-    document.querySelector('.card-round-count').classList.remove('hide');
+    showElements();
     startButton.style.display = 'none';
 });
 
-
+function showElements() {
+    document.querySelector('.card-title').classList.remove('hide');
+    document.querySelector('.card-round-count').classList.remove('hide');
+    rockButton.classList.remove('hide');
+    scissorsButton.classList.remove('hide');
+    paperButton.classList.remove('hide');
+}
 
