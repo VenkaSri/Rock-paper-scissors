@@ -7,10 +7,10 @@ const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
 const startButton = document.querySelector('.start button');
+const scoreboard = document.querySelector('.scoreboard');
+const displayRound = document.querySelector('.playerScore');
 
-
-
-  function computerPlay() {
+function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3);
 
     switch (randomNumber) {
@@ -30,10 +30,8 @@ const startButton = document.querySelector('.start button');
     return randomNumber;
 }
 
-  function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
 
-    
-    
     if (playerSelection == "Rock" && computerSelection == "Paper") {
         computerScore++;
         return console.log("You lose! Paper beats rock");    
@@ -63,21 +61,17 @@ function removeClass() {
     paperButton.classList.remove("addclass");
 }
 
-
 rockButton.addEventListener("click", function() {
     const playerSelection = "Rock";
-    const displayRound = document.querySelector('.card-round-count');
+    
 
     displayRound.textContent = roundCount++;
     removeClass();
-    playRound(playerSelection, computerPlay());
-    
-    
+    playRound(playerSelection, computerPlay());    
 });
 
 paperButton.addEventListener("click", function() {
     const playerSelection = "Paper";
-    const displayRound = document.querySelector('.card-round-count');
 
     displayRound.textContent = roundCount++;
     removeClass();
@@ -86,7 +80,6 @@ paperButton.addEventListener("click", function() {
 
 scissorsButton.addEventListener("click", function() {
     const playerSelection = "Scissors";
-    const displayRound = document.querySelector('.card-round-count');
 
     displayRound.textContent = roundCount++;
     removeClass();
@@ -99,10 +92,9 @@ startButton.addEventListener('click', function() {
 });
 
 function showElements() {
-    document.querySelector('.card-title').classList.remove('hide');
-    document.querySelector('.card-round-count').classList.remove('hide');
     rockButton.classList.remove('hide');
     scissorsButton.classList.remove('hide');
     paperButton.classList.remove('hide');
+    scoreboard.classList.remove('hide');
 }
 

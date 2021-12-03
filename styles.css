@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('font.ttf');
+   }
+
 body{
     background-color: #201E20;
 }
@@ -16,8 +21,7 @@ header {
 }
 
 .rock-paper-container {
-      display: flex;
-      gap: 90px;
+      display: flex;   
 }
 
 main {
@@ -29,18 +33,6 @@ main {
     flex-direction: column;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    height: 220px;
-    width: 190px;
-
-    border-radius: 20px;
-    margin-top: 20px;
-}
 
 .card-title {
     border-bottom: 1.5px solid red;
@@ -51,7 +43,7 @@ main {
 .scissors {
     height: 170px;
     width: 170px;
-    background-color: #E0A96D;
+    background-color: #eee;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -61,7 +53,7 @@ main {
 .inner-rock {
     height: 160px;
     width: 160px;
-    background-color: #201E20;
+    background-color: #E0A96D;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -80,23 +72,18 @@ main {
 }
 
 .addclass {
-    background-color: black;
+    background-color: red;
 }
 
 header .title {
     font-weight: 900;
     font-size: 3.5em;
     color: #eee;
-    background-color: #E0A96D;
-    border-radius: 20px;
-    padding: 15px;
-    margin-top: 50px;
+
 }
 
-.hide {
-    display: none;
-}
-.card button {
+
+.start button {
     color: #eee;
     background-color: #E0A96D;
     outline: none;
@@ -104,4 +91,50 @@ header .title {
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.scoreboard {
+    width: 300px;
+    height: 150px;
+    background-color: #000;
+    margin: 0 10px;
+    border-radius: 20px;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.scoreboard-title {
+    align-self: center;
+    margin-top: 10px ;
+    font-weight: 900;
+    
+}
+
+.usersHeader,
+.usersScores {
+    display: flex;
+    justify-content: space-around;
+}
+
+.scoreboard .nameOfPlayer {
+    color: #E0A96D;
+    font-size: 20px;
+}
+
+.playerScore,
+.computerScore {
+    color: rgb(146, 26, 26);
+    font-size: 40px;
+    margin-right: 10px;
+    font-family: digital-clock-font;
+}
+
+.playerScore {
+    margin-right: 20px;
 }
