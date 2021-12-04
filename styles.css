@@ -4,14 +4,11 @@
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-=======
 @font-face{
     font-family:'digital-clock-font';
     src: url('font.ttf');
    }
 
->>>>>>> rps-ui
 body{
     background-color: #201E20;
 }
@@ -24,12 +21,7 @@ header {
 }
 
 .rock-paper-container {
-<<<<<<< HEAD
-      display: flex;
-      gap: 90px;
-=======
       display: flex;   
->>>>>>> rps-ui
 }
 
 main {
@@ -41,22 +33,6 @@ main {
     flex-direction: column;
 }
 
-<<<<<<< HEAD
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    height: 220px;
-    width: 190px;
-
-    border-radius: 20px;
-    margin-top: 20px;
-}
-
-=======
->>>>>>> rps-ui
 .card-title {
     border-bottom: 1.5px solid red;
 }
@@ -66,23 +42,13 @@ main {
 .scissors {
     height: 170px;
     width: 170px;
-<<<<<<< HEAD
-    background-color: #E0A96D;
-=======
     background-color: #eee;
->>>>>>> rps-ui
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-<<<<<<< HEAD
-.inner-rock {
-    height: 160px;
-    width: 160px;
-    background-color: #201E20;
-=======
 .rock {
     margin-right: 20px;
 }
@@ -97,66 +63,38 @@ main {
     height: 160px;
     width: 160px;
     background-color: #E0A96D;
->>>>>>> rps-ui
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
-
-
-=======
 }
 
 .inner-rock:hover {
     border: 2px solid #000;
->>>>>>> rps-ui
 }
 
 .inner-rock img {
     width: 200px;
 }
 
-<<<<<<< HEAD
-.inner-rock:hover{
-    border: 1px solid #E0A96D;
-}
-
-.addclass {
-    background-color: black;
-=======
 .scissors img {
     width: 100px;
 }
 
 .addclass {
     background-color: rgb(255, 0, 0);
->>>>>>> rps-ui
 }
 
 header .title {
     font-weight: 900;
     font-size: 3.5em;
     color: #eee;
-<<<<<<< HEAD
-    background-color: #E0A96D;
-    border-radius: 20px;
-    padding: 15px;
-    margin-top: 50px;
-}
-
-.hide {
-    display: none;
-}
-.card button {
-=======
 
 }
 
 
 .start button {
->>>>>>> rps-ui
     color: #eee;
     background-color: #E0A96D;
     outline: none;
@@ -164,9 +102,6 @@ header .title {
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
-<<<<<<< HEAD
-}
-=======
 }
 
 .scoreboard {
@@ -216,4 +151,3 @@ header .title {
     margin-left: 30px;
 }
 
->>>>>>> rps-ui
