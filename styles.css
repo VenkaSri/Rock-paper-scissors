@@ -104,16 +104,24 @@ header .title {
     cursor: pointer;
 }
 
-.scoreboard {
-    width: 300px;
-    height: 150px;
-    background-color: #000;
-    margin: 0 10px;
-    border-radius: 20px;
+.scoreboard-header {
     color: #eee;
+    width: 300px;
+    height: 50px;
+    background-color: #E0A96D;
+    border-radius: 20px 20px 0 0;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreboard-body {
+    width: 300px;
+    height: 100px;
+    background-color: #eee;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .hide {
