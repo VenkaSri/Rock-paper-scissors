@@ -130,8 +130,7 @@ header .title {
 .usersScores {
     display: flex;
     gap: 140px;
-    margin-left: 30px;
-    
+    margin-left: 30px;  
 }
 
 .playerName,
@@ -143,12 +142,12 @@ header .title {
 .playerScore,
 .computerScore {
     color: rgb(146, 26, 26);
-    font-size: 40px;
+    font-size: 20px;
     margin-right: 10px;
     font-family: digital-clock-font;
 }
 
 .computerScore {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
