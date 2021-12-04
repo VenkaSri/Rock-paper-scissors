@@ -8,7 +8,8 @@ const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
 const startButton = document.querySelector('.start button');
 const scoreboard = document.querySelector('.scoreboard');
-const displayRound = document.querySelector('.playerScore');
+const displayPlayerCount = document.querySelector('.playerScore');
+const displayComputerCount = document.querySelector('.computerScore');
 
 function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3);
@@ -33,25 +34,23 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection == "Rock" && computerSelection == "Paper") {
-        computerScore++;
-        return console.log("You lose! Paper beats rock");    
+        displayComputerCount.textContent = ++computerScore; 
+        console.log('P b R');
     } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-        computerScore++;
-        return console.log("You lose! Scissors beats paper");    
+        displayComputerCount.textContent = ++computerScore;
+            
     } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-        computerScore++;
-        return console.log("You lose! Rock beats scissors");    
+        displayComputerCount.textContent = ++computerScore; 
+           
     } else if (playerSelection == "Rock" && computerSelection == "Scissors") {
-        yourScore++;
-        return console.log("You win! Rock beats scissors");    
+        displayPlayerCount.textContent = ++yourScore; 
+        console.log('S l R');  
     } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        yourScore++;
-        return console.log("You win! Paper beats Rock");    
+        displayPlayerCount.textContent = ++yourScore; 
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        yourScore++;
-        return console.log("You win! Scissors beats paper");    
+        displayPlayerCount.textContent = ++yourScore;  
     }else { 
-        return console.log("It's a tie");
+        return ;
     } 
 }
 
@@ -63,17 +62,14 @@ function removeClass() {
 
 rockButton.addEventListener("click", function() {
     const playerSelection = "Rock";
-    
 
-    displayRound.textContent = roundCount++;
     removeClass();
-    playRound(playerSelection, computerPlay());    
+    playRound(playerSelection, computerPlay());     
 });
 
 paperButton.addEventListener("click", function() {
     const playerSelection = "Paper";
 
-    displayRound.textContent = roundCount++;
     removeClass();
     playRound(playerSelection, computerPlay());
 });
@@ -81,7 +77,6 @@ paperButton.addEventListener("click", function() {
 scissorsButton.addEventListener("click", function() {
     const playerSelection = "Scissors";
 
-    displayRound.textContent = roundCount++;
     removeClass();
     playRound(playerSelection, computerPlay());
 });

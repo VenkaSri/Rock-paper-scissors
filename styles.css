@@ -33,7 +33,6 @@ main {
     flex-direction: column;
 }
 
-
 .card-title {
     border-bottom: 1.5px solid red;
 }
@@ -50,6 +49,16 @@ main {
     align-items: center;
 }
 
+.rock {
+    margin-right: 20px;
+}
+
+.scissors {
+    margin-left: 20px;
+}
+
+
+
 .inner-rock {
     height: 160px;
     width: 160px;
@@ -59,20 +68,22 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-
+.inner-rock:hover {
+    border: 2px solid #000;
 }
 
 .inner-rock img {
     width: 200px;
 }
 
-.inner-rock:hover{
-    border: 1px solid #E0A96D;
+.scissors img {
+    width: 100px;
 }
 
 .addclass {
-    background-color: red;
+    background-color: rgb(255, 0, 0);
 }
 
 header .title {
@@ -112,17 +123,19 @@ header .title {
 .scoreboard-title {
     align-self: center;
     margin-top: 10px ;
-    font-weight: 900;
-    
+    font-weight: 900;   
 }
 
 .usersHeader,
 .usersScores {
     display: flex;
-    justify-content: space-around;
+    gap: 140px;
+    margin-left: 30px;
+    
 }
 
-.scoreboard .nameOfPlayer {
+.playerName,
+.computerName {
     color: #E0A96D;
     font-size: 20px;
 }
@@ -135,6 +148,7 @@ header .title {
     font-family: digital-clock-font;
 }
 
-.playerScore {
-    margin-right: 20px;
+.computerScore {
+    margin-left: 20px;
 }
+
