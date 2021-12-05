@@ -7,9 +7,11 @@ const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
 const startButton = document.querySelector('.start button');
-const scoreboard = document.querySelector('.scoreboard');
+const scoreboard = document.querySelector('.scoreboard-container');
+const displayRoundCount = document.querySelector('.roundCount');
 const displayPlayerCount = document.querySelector('.playerScore');
 const displayComputerCount = document.querySelector('.computerScore');
+const displayRoundResults = document.querySelector('.roundResults');
 
 function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3);
@@ -35,22 +37,25 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerSelection == "Rock" && computerSelection == "Paper") {
         displayComputerCount.textContent = ++computerScore; 
+        displayRoundResults.textContent = 'You lose!';
         console.log('P b R');
     } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
         displayComputerCount.textContent = ++computerScore;
-            
+        displayRoundResults.textContent = 'You lose!';
     } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
         displayComputerCount.textContent = ++computerScore; 
-           
+        displayRoundResults.textContent = 'You lose!';   
     } else if (playerSelection == "Rock" && computerSelection == "Scissors") {
         displayPlayerCount.textContent = ++yourScore; 
-        console.log('S l R');  
+        displayRoundResults.textContent = 'You win!';  
     } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-        displayPlayerCount.textContent = ++yourScore; 
+        displayPlayerCount.textContent = ++yourScore;
+        displayRoundResults.textContent = 'You win!'; 
     } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-        displayPlayerCount.textContent = ++yourScore;  
+        displayPlayerCount.textContent = ++yourScore;
+        displayRoundResults.textContent = 'You win!';  
     }else { 
-        return ;
+        displayRoundResults.textContent = "It's a tie!";
     } 
 }
 
@@ -64,19 +69,22 @@ rockButton.addEventListener("click", function() {
     const playerSelection = "Rock";
 
     removeClass();
-    playRound(playerSelection, computerPlay());     
+    playRound(playerSelection, computerPlay());
+    displayRoundCount.textContent = roundCount++;     
 });
 
 paperButton.addEventListener("click", function() {
     const playerSelection = "Paper";
     removeClass();
     playRound(playerSelection, computerPlay());
+    displayRoundCount.textContent = roundCount++;
 });
 
 scissorsButton.addEventListener("click", function() {
     const playerSelection = "Scissors";
     removeClass();
     playRound(playerSelection, computerPlay());
+    displayRoundCount.textContent = roundCount++;
 });
 
 startButton.addEventListener('click', function() {
