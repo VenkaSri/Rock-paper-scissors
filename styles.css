@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-@font-face{
-    font-family:'digital-clock-font';
-    src: url('font.ttf');
-   }
-
 body{
     background-color: #201E20;
 }
@@ -31,6 +26,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
 }
 
 .card-title {
@@ -56,8 +52,6 @@ main {
 .scissors {
     margin-left: 20px;
 }
-
-
 
 .inner-rock {
     height: 160px;
@@ -117,21 +111,13 @@ header .title {
 
 .scoreboard-body {
     width: 300px;
-    height: 100px;
+    height: 150px;
     background-color: #eee;
-    border-radius: 0 0 20px 20px;
-    display: flex;
-    justify-content: space-between;
+    border-radius: 0 0 20px 20px; 
 }
 
 .hide {
     display: none;
-}
-
-.scoreboard-title {
-    align-self: center;
-    margin-top: 10px ;
-    font-weight: 900;   
 }
 
 .usersHeader,
@@ -147,15 +133,34 @@ header .title {
     font-size: 20px;
 }
 
-.playerScore,
-.computerScore {
-    color: rgb(146, 26, 26);
-    font-size: 20px;
-    margin-right: 10px;
-    font-family: digital-clock-font;
+
+.scoreboard-body-lables,
+.scoreboard-body-scores {
+    display: flex;
+    
+    
 }
 
-.computerScore {
-    margin-left: 30px;
+.scoreboard-body-lables  div {
+    width: 100px;
+    align-self: center;
+    text-align: center;
+    margin-top: 10px;
 }
 
+.scoreboard-body-scores div{
+    width: 150px;
+    align-self: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.divide-line {
+    font-size: 27px;
+    color: rgb(197, 194, 194);
+}
+
+hr {
+    margin-left: 15px;
+    width: 90%;
+}
