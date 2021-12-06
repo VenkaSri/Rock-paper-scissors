@@ -1,17 +1,19 @@
 let roundCount = 1;
 let yourScore = 0;
 let computerScore = 0;
-compHover = 0;
 
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
 const startButton = document.querySelector('.start button');
-const scoreboard = document.querySelector('.scoreboard-container');
+const playAgainButton = document.querySelector('.end-button');
 const displayRoundCount = document.querySelector('.roundCount');
+const displayGameResults = document.querySelector('.end-title');
 const displayPlayerCount = document.querySelector('.playerScore');
-const displayComputerCount = document.querySelector('.computerScore');
+const scoreboard = document.querySelector('.scoreboard-container');
 const displayRoundResults = document.querySelector('.roundResults');
+const displayComputerCount = document.querySelector('.computerScore');
+
 
 function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3);
@@ -65,25 +67,27 @@ function removeClass() {
     paperButton.classList.remove("addclass");
 }
 
+
 rockButton.addEventListener("click", function() {
     const playerSelection = "Rock";
 
     removeClass();
-    playRound(playerSelection, computerPlay());
+    game(playerSelection);
     displayRoundCount.textContent = roundCount++;     
 });
+
 
 paperButton.addEventListener("click", function() {
     const playerSelection = "Paper";
     removeClass();
-    playRound(playerSelection, computerPlay());
+    game(playerSelection);
     displayRoundCount.textContent = roundCount++;
 });
 
 scissorsButton.addEventListener("click", function() {
     const playerSelection = "Scissors";
     removeClass();
-    playRound(playerSelection, computerPlay());
+    game(playerSelection);
     displayRoundCount.textContent = roundCount++;
 });
 
@@ -97,5 +101,54 @@ function showElements() {
     scissorsButton.classList.remove('hide');
     paperButton.classList.remove('hide');
     scoreboard.classList.remove('hide');
+}
+
+function hideElements() {
+    rockButton.classList.add('hide');
+    scissorsButton.classList.add('hide');
+    paperButton.classList.add('hide');
+    scoreboard.classList.add('hide');
+}
+
+function game(playerSelection) {
+    if (roundCount <= 5) {
+        playRound(playerSelection, computerPlay());
+    } else {
+        hideElements();
+        endGame(); 
+        
+    }
+}
+
+function endGame() {
+    displayGameResults.classList.remove('hide');
+    displayGameResults.classList.add('title');
+    document.querySelector('h1').classList.add('hide');
+    playAgainButton.classList.remove('hide');
+    if (computerScore > yourScore) {
+        displayGameResults.textContent = 'GOOD TRY!';
+    } else if (yourScore > computerScore) {
+        displayGameResults.textContent = 'YOU WON!!';
+    } else {
+        displayGameResults.textContent = "It'S A TIE GAME!";
+    }
+}
+
+playAgainButton.addEventListener('click', function() {
+    resetGame();
+})
+
+function resetGame() {
+    roundCount = 1;
+    yourScore = 0;
+    computerScore = 0;
+    displayPlayerCount.textContent = yourScore;
+    displayComputerCount.textContent = computerScore;
+    displayRoundResults.textContent = "";
+    displayRoundCount.textContent = roundCount;
+    showElements();
+    displayGameResults.classList.add('hide');
+    playAgainButton.classList.add('hide');
+    document.querySelector('h1').classList.remove('hide');
 }
 

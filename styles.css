@@ -80,7 +80,7 @@ main {
     background-color: rgb(255, 0, 0);
 }
 
-header .title {
+.title {
     font-weight: 900;
     font-size: 3.5em;
     color: #eee;
@@ -88,7 +88,8 @@ header .title {
 }
 
 
-.start button {
+.start button,
+.end-button button {
     color: #eee;
     background-color: #E0A96D;
     outline: none;
@@ -136,9 +137,7 @@ header .title {
 
 .scoreboard-body-lables,
 .scoreboard-body-scores {
-    display: flex;
-    
-    
+    display: flex;  
 }
 
 .scoreboard-body-lables  div {
