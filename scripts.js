@@ -4,6 +4,7 @@ let computerScore = 0;
 
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
+const subTitle = document.querySelector('.sub-title');
 const scissorsButton = document.querySelector(".scissors");
 const startButton = document.querySelector('.start button');
 const playAgainButton = document.querySelector('.end-button');
@@ -101,6 +102,7 @@ function showElements() {
     scissorsButton.classList.remove('hide');
     paperButton.classList.remove('hide');
     scoreboard.classList.remove('hide');
+    subTitle.classList.remove('hide');
 }
 
 function hideElements() {
@@ -108,6 +110,7 @@ function hideElements() {
     scissorsButton.classList.add('hide');
     paperButton.classList.add('hide');
     scoreboard.classList.add('hide');
+    subTitle.classList.add('hide');
 }
 
 function game(playerSelection) {
@@ -128,9 +131,9 @@ function endGame() {
     if (computerScore > yourScore) {
         displayGameResults.textContent = 'GOOD TRY!';
     } else if (yourScore > computerScore) {
-        displayGameResults.textContent = 'YOU WON!!';
+        displayGameResults.textContent = 'YOU WON THE GAME!!';
     } else {
-        displayGameResults.textContent = "It'S A TIE GAME!";
+        displayGameResults.textContent = "IT'S A TIE GAME!";
     }
 }
 

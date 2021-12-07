@@ -53,7 +53,7 @@ main {
     margin-left: 20px;
 }
 
-.inner-rock {
+.img-container {
     height: 160px;
     width: 160px;
     background-color: #E0A96D;
@@ -64,11 +64,11 @@ main {
     align-items: center;
 }
 
-.inner-rock:hover {
+.img-container:hover {
     border: 2px solid #000;
 }
 
-.inner-rock img {
+.img-container img {
     width: 100px;
 }
 
@@ -80,9 +80,13 @@ main {
     font-weight: 900;
     font-size: 3.5em;
     color: #eee;
-
 }
 
+.sub-title {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #eee
+}
 
 .start button,
 .end-button button {
@@ -170,5 +174,12 @@ hr {
 
 .roundCount {
     color: #E0A96D;
+    font-weight: 900;
+    border-bottom: 1px solid red;
+}
+
+.five {
+    color: #E0A96D;
+    font-weight: 900;
 }
 
