@@ -6,7 +6,7 @@ This was part of the [The Odin Project curriculum](https://www.theodinproject.co
 
 ![Demo](https://im7.ezgif.com/tmp/ezgif-7-dadd46d84a58.gif)
 - Game resets after 5 rounds
-- Computer's selection will shown in an "hover" effect
+- Computer's selection will be visually display by a "hover" effect
 
 
 
