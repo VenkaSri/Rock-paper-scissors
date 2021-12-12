@@ -6,6 +6,11 @@
 
 body{
     background-color: #201E20;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between
+
 }
 
 header {
@@ -183,3 +188,33 @@ hr {
     font-weight: 900;
 }
 
+.footer {
+    height: 70px;
+    background-color: #E0A96D;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.copyright a {
+    width: 24px;
+    height: 20px;
+    align-self: center;
+
+}
+
+.copyright p {
+    color: #f9faf8;
+    font-size: 20px;
+}
+
+
+footer {
+    margin-top: auto;
+}
