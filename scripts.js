@@ -114,12 +114,12 @@ function hideElements() {
 }
 
 function game(playerSelection) {
-    if (roundCount <= 5) {
-        playRound(playerSelection, computerPlay());
-    } else {
+    if (computerScore == 5 || yourScore == 5) {
         hideElements();
         endGame(); 
         
+    } else {
+        playRound(playerSelection, computerPlay());  
     }
 }
 
