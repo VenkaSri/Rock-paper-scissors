@@ -5,7 +5,7 @@ A game of Rock Paper Scissors created using HTML, CSS and JavaScript
 
 This was part of the [The Odin Project curriculum](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors)
 
-![Demo](https://im7.ezgif.com/tmp/ezgif-7-dadd46d84a58.gif)
+![Demo](https://i.imgur.com/RjLtbuU.gif)
 - Game resets when either the computer or the player reaches 5 points
 - Computer's selection will be visually displayed by a "hover" effect
 
