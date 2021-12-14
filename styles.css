@@ -210,11 +210,18 @@ hr {
 }
 
 .copyright p {
-    color: #f9faf8;
+    color: #201E20;
     font-size: 20px;
 }
 
 
 footer {
     margin-top: auto;
+}
+
+
+.copyright a:hover,
+.copyright a:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
 }
